@@ -1,0 +1,172 @@
+body{
+    background-color: white;
+    background-size: cover;
+    background-position-y: -100px;
+}
+.container{
+    max-width: 960px;
+    margin: 0px auto;
+}
+#header{
+    background-color: greenyellow;
+    height: 60px;
+}
+#actions{
+    display: flex;
+    justify-items: center;
+    position: relative;
+    left: 700px;
+}
+#actions #date{
+    padding: 20px;
+    color: blue;
+    font-style: inherit;
+
+}
+#actions .item{
+    padding: 5px 20px;
+
+}
+nav{
+    display:flex;/* logo và các menu ở cùng một hàng */
+    justify-content: space-between; /* thẻ nav có hai phần là thẻ a chứa ảnh logo và ul chứa các menu thì hai phần này sẽ nắm hai đầu của div header: */
+    justify-items: center;
+    width: 100%;
+    background-color: cadetblue;
+}
+#logo{
+    padding:5px 0px;
+    position: relative;/* dộ cao của div header là 60, căn padding logo cách trên,dưới  header 5px */
+    left: -700px;
+}
+#logo img{/* CSS cho thẻ img trong id logo, tức là css cho ảnh logo */
+    max-height: 50px; /* độ cao ảnh logo tối đa là 50 */
+    width: auto;
+}
+#box-menu{
+    display: flex;/*các tùy chọn của menu trên cùng một hàng*/
+    list-style: none; /* mất đi cái chấm tròn khi liệt kê li trong ul */
+    margin: 0;/* Nếu k để margin 0 thì thanh menu bar ở giữa */
+    padding:0px 200px 0px 0px;
+    position: relative;
+    left: 300px;
+
+}
+#box-menu li{
+    position: relative; /* phần tử cha của ul.submenu, thiết lập vị trí để căn chỉnh submenu */
+
+}
+#box-menu li a{/* Các thẻ a trong thẻ li ở id box-menu; bao gồm cả thẻ a trong thẻ li trong id sub-menu */
+    color: black;
+    display: block;
+    padding: 18px 65px;
+    text-decoration: none;
+}
+#box-menu ul.sub-menu{
+    width: 150px;
+    position:absolute;
+    border: 1px solid grey;
+    background-color: #6cc0ac;
+    padding: 15px 0px;
+    list-style: none;
+    display: none;
+}
+#box-menu li:hover>ul.sub-menu{ /* Chỉ tác động vào sub menu trực tiếp */
+    display: block;
+}
+#box-menu ul.sub-menu a{
+    padding: 8px 15px; /* thiết lập khoảng cách giữa các loại sp sub menu gần nhau hơn */
+    border-bottom: 1px solid #e0b8b8; /* đường viền dưới mỗi thẻ a đồgỗ, đồ mỹ nghệ, đồ cổ */
+    left: 0;
+}
+#box-menu ul.sub-menu li:hover>a{
+    border-bottom: 1px solid yellow;/* khi hold chuột vào từng li của submenu thì đổi màu border bottem từ hồng sang đỏ */
+}
+#box-menu ul.sub-menu li:last-child a{
+    border: none; /* li cuối cùng, thẻ a k có đường viền */
+}
+#box-menu ul.sub-menu ul.sub-menu{
+    left: 150px;
+    top: -33px; /* Di chuyển menu cấp 3 ngang hàng với menu cấp 2 tươn ứng */
+
+}
+#box-menu>li>a{
+    position:relative;/* Phần này là menu cha, để căn chỉnh menu con phía dưới */
+}
+#box-menu>li>a::before{
+    content: "";
+    height: 4px;
+    width: 0px; /* phần này nên chỉnh lại cho đẹp hơn */
+    background: red;
+    position: absolute; /* menu con để vị trí tuyệt đối */
+    bottom: 0px;
+    left: 0px;
+    transition:line-height;
+}
+#box-menu>li:hover>a::before{/* KHi hold chuột vào mới hiện ra bottem */
+    display: block;
+    width: 100%;
+}
+#sideleft{
+    width: 200px;
+    height: 400px;
+    position: relative;
+    top:150px;
+    background-color: #3f9f8d;
+    color: black;
+    justify-items:center;
+
+
+}
+#sideleft ul li{
+
+    list-style: none;
+
+    color: black;
+}
+#sideleft ul li a {
+
+    text-decoration: none;
+    color: red;
+}
+#sideleft .banchay{
+    position: relative;
+    top: 0px;
+
+}
+#content{
+    position: relative;
+    left:300px;
+    top: -250px;
+}
+.sanpham{
+    display: flex;
+    justify-items: center;
+
+}
+.sanpham .text{
+    position: relative;
+    left: 40px;
+}
+#footer{
+    display: flex;
+    justify-content: space-between;
+    background-color: #6cc0ac;
+    width: 100%;
+    position: relative;
+    top: 70px;
+    height: 90px;
+    font-size: 14px;
+
+}
+#footer .ttlienhe{
+    position: relative;
+    left: -100px;
+
+}
+#footer .ttcty{
+    position: relative;
+    left: 300px;
+
+}
+
